@@ -45,12 +45,17 @@ namespace Metotlar
             }
             Console.WriteLine("-----------Metotlar------------");
             //instance - örnek
-            //encapsulation
+            //encapsulation : Kapsülleme, Ayrı ayrı yazacağın ve düzensiz olan bir yapıyı bir düzenin içine sokuyorsun.
 
             SepetManager sepetManager = new SepetManager();
             sepetManager.Ekle(urun1);
             sepetManager.Ekle(urun2);
 
+
+            //ürünü böyle de gönderebiliriz. Neden illa class yapıyoruz?
+            //cevap: E-ticaret sitesini düşün; farklı sayfalarda ürünleri listeledin. Sonra yönetim bir de stok adeti ekleyelim dedi.
+            //O zaman imzadaki, yani SepetManager daki ***public void Ekle2(string urunAdi, string aciklama, double fiyat, int stokAdedi)*** bu alanı değiştirmen gerektiği gibi,
+            // metodaki parantezin içindeki son elemana stok adedini de değiştirmen gerekiyor.
             sepetManager.Ekle2("Armut", "Yeşil armut", 12, 10);
             sepetManager.Ekle2("Elma", "Yeşil elma", 12, 9);
             sepetManager.Ekle2("Karpuz", "Diyarbakır karpuzu", 12, 8);
